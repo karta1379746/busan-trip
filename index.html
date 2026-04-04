@@ -481,6 +481,43 @@ body.hide-time .timeline-item::before {
 .outfit-tip { font-size: 13px; padding: 6px 0; }
 .outfit-tip strong { color: var(--brown); }
 
+/* Shopping section */
+.shop-category { font-size: 15px; font-weight: 700; color: var(--brown); margin: 16px 0 8px; padding-bottom: 6px; border-bottom: 2px solid var(--border); }
+.shop-category:first-child { margin-top: 4px; }
+.shop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+.shop-item {
+  background: var(--bg);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.shop-item-img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+  background: #E8DDD4;
+}
+.shop-item-emoji {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  background: #FFF3E0;
+}
+.shop-item-body { padding: 8px 10px; }
+.shop-item-name { font-size: 13px; font-weight: 700; color: var(--brown); }
+.shop-item-kr { font-size: 11px; color: var(--text-light); }
+.shop-item-desc { font-size: 11px; color: var(--text); margin-top: 4px; line-height: 1.5; }
+.shop-item-when { font-size: 11px; color: var(--primary); margin-top: 4px; font-weight: 600; }
+.shop-list-section { margin-bottom: 10px; }
+.shop-list-title { font-size: 13px; font-weight: 700; color: var(--brown); margin: 8px 0 4px; }
+.shop-list-items { font-size: 12px; color: var(--text); line-height: 1.7; padding-left: 4px; }
+.shop-timing { background: linear-gradient(135deg, #FFF8E1, #FFF3E0); border-radius: 10px; padding: 12px; margin-top: 12px; font-size: 12px; line-height: 1.7; }
+.shop-timing strong { color: var(--primary); }
+
 /* Bottom nav */
 .bottom-nav {
   position: fixed;
@@ -1615,6 +1652,268 @@ html { scroll-behavior: smooth; }
 
 </section>
 
+<!-- ==================== 必買伴手禮 ==================== -->
+<section class="section" id="shopping">
+  <div class="section-title"><span class="icon">🛍️</span> 必買伴手禮 & 掃貨清單</div>
+  <div class="card">
+    <button class="collapsible-trigger" onclick="toggleCollapse(this)">
+      <span>🎁 釜山限定伴手禮</span><span class="arrow">▼</span>
+    </button>
+    <div class="collapsible-content">
+      <div class="card-body">
+        <div class="shop-category">🍪 甜點類（送禮最有面子）</div>
+        <div class="shop-grid">
+          <div class="shop-item">
+            <img class="shop-item-img" src="images/shop-yakgwa.jpg" alt="二代名菓" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="display:block"><div class="shop-item-emoji" style="display:none">🍘</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">二代名菓</div>
+              <div class="shop-item-kr">이대명과</div>
+              <div class="shop-item-desc">1954 年創立煎餅老店，市長認證「釜山優秀食品」。薄脆烘烤不油炸，花生、芝麻、海苔等六種口味，獨立包裝方便分送。</div>
+              <div class="shop-item-when">📍 南浦洞 / 海雲台都有分店</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-emoji">🧈</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">Keveren House 奶油派</div>
+              <div class="shop-item-kr">Busan Butter Pie</div>
+              <div class="shop-item-desc">海雲台爆紅甜點，酥脆千層派皮配香濃卡士達餡，搭配特製蘋果醬。海雲台站步行 2 分鐘。</div>
+              <div class="shop-item-when">🕐 Day 4-6 住海雲台順路買</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <img class="shop-item-img" src="images/shop-souffle.jpg" alt="CHEFFLE" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="display:block"><div class="shop-item-emoji" style="display:none">🧀</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">CHEFFLE 起司舒芙蕾</div>
+              <div class="shop-item-kr">치플</div>
+              <div class="shop-item-desc">廣安里綿密起司蛋糕，有原味、焦糖布蕾、抹茶等，禮盒包裝精美。</div>
+              <div class="shop-item-when">🕐 Day 5 去廣安里順便帶</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <img class="shop-item-img" src="images/shop-eomuk.jpg" alt="古來思魚糕" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="display:block"><div class="shop-item-emoji" style="display:none">🐟</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">古來思魚糕</div>
+              <div class="shop-item-kr">고래사어묵</div>
+              <div class="shop-item-desc">釜山代表名產，近 50 種口味自助夾，有真空包裝可帶回台灣。海雲台站出來就看到巨大招牌。</div>
+              <div class="shop-item-when">🕐 Day 4 逛海雲台市場經過</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-category">🏷️ 在地特產</div>
+        <div class="shop-grid">
+          <div class="shop-item">
+            <div class="shop-item-emoji">🍙</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">札嘎其海苔</div>
+              <div class="shop-item-kr">자갈치오지매</div>
+              <div class="shop-item-desc">巧克力、辣味、花生等特殊口味，低卡高蛋白。釜田市場乾貨區也有各種海苔可挑。</div>
+              <div class="shop-item-when">🕐 Day 2 札嘎其市場買</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <img class="shop-item-img" src="images/shop-makgeolli.jpg" alt="福順都家馬格利酒" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="display:block"><div class="shop-item-emoji" style="display:none">🍶</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">福順都家馬格利酒</div>
+              <div class="shop-item-kr">복순도가</div>
+              <div class="shop-item-desc">號稱「香檳級」傳統米酒，曾被選為韓國國宴用酒，口感滑順微甜帶氣泡。</div>
+              <div class="shop-item-when">📍 釜山站有門市</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <button class="collapsible-trigger" onclick="toggleCollapse(this)">
+      <span>🏪 大賣場 / 超市掃貨清單</span><span class="arrow">▼</span>
+    </button>
+    <div class="collapsible-content">
+      <div class="card-body">
+        <div class="shop-category">🍿 零食餅乾（常有 1+1 活動）</div>
+        <div class="shop-grid">
+          <div class="shop-item">
+            <div class="shop-item-emoji">🥜</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">HBAF 杏仁果</div>
+              <div class="shop-item-desc">蜂蜜奶油和跳跳糖口味必買，樂天超市常有 1+1 活動。</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <img class="shop-item-img" src="images/shop-turtle-chips.jpg" alt="烏龜餅乾" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="display:block"><div class="shop-item-emoji" style="display:none">🐢</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">烏龜餅乾</div>
+              <div class="shop-item-kr">꼬북칩</div>
+              <div class="shop-item-desc">松露口味韓國限定，酥脆四層口感。</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <img class="shop-item-img" src="images/shop-honey-chips.jpg" alt="蜂蜜奶油洋芋片" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="display:block"><div class="shop-item-emoji" style="display:none">🍯</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">蜂蜜奶油洋芋片</div>
+              <div class="shop-item-kr">허니버터칩</div>
+              <div class="shop-item-desc">韓國國民零食，甜鹹交織超上癮。</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-emoji">🍪</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">Binch 巧克力餅乾</div>
+              <div class="shop-item-desc">薄脆餅乾裹巧克力，經典韓國零食。</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-emoji">🍰</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">ZERO 巧克力夾心蛋糕</div>
+              <div class="shop-item-desc">零砂糖系列，罪惡感減半好吃不減。</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-emoji">🥯</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">蜂蜜貝果片</div>
+              <div class="shop-item-desc">Olive Young 爆紅低卡零食，酥脆涮嘴。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-category">🍜 泡麵（帶回家煮最划算）</div>
+        <div class="shop-grid">
+          <div class="shop-item">
+            <img class="shop-item-img" src="images/shop-ramyun.jpg" alt="辛拉麵" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="display:block"><div class="shop-item-emoji" style="display:none">🌶️</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">辛拉麵</div>
+              <div class="shop-item-kr">신라면</div>
+              <div class="shop-item-desc">韓國國民泡麵，當地買便宜很多。</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-emoji">🧀</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">不倒翁起司拉麵</div>
+              <div class="shop-item-desc">濃郁起司湯底，不辣也好吃。</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-emoji">🍝</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">浣熊炸醬麵</div>
+              <div class="shop-item-desc">韓式炸醬口味，Q彈麵條。</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-emoji">🔥</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">辣雞麵</div>
+              <div class="shop-item-desc">看到特殊口味就抓！</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-category">🫙 料理調味（煮飯實用）</div>
+        <div class="shop-grid">
+          <div class="shop-item">
+            <div class="shop-item-emoji">🫒</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">純正芝麻油</div>
+              <div class="shop-item-desc">韓式料理的靈魂，拌飯拌菜必備。</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <img class="shop-item-img" src="images/shop-gochujang.jpg" alt="CJ辣椒醬" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="display:block"><div class="shop-item-emoji" style="display:none">🌶️</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">CJ 辣椒醬</div>
+              <div class="shop-item-kr">고추장</div>
+              <div class="shop-item-desc">炒年糕必備，正宗韓式辣醬。</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-emoji">🥬</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">宗家府泡菜</div>
+              <div class="shop-item-kr">종가집</div>
+              <div class="shop-item-desc">市佔七成的正宗味道，真空包裝可帶回。</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-emoji">🫚</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">黑胡椒粉</div>
+              <div class="shop-item-desc">韓國產研磨黑胡椒，香氣十足。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-category">🧴 生活日用（自用超推）</div>
+        <div class="shop-grid">
+          <div class="shop-item">
+            <div class="shop-item-emoji">🪥</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">LG 竹鹽牙膏</div>
+              <div class="shop-item-desc">韓國品牌力第一，竹鹽系列清潔力強。</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-emoji">💆</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">呂 Ryo 護髮油橘瓶</div>
+              <div class="shop-item-kr">려</div>
+              <div class="shop-item-desc">國民護髮油，韓國買超便宜。</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <div class="shop-item-emoji">🌽</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">玉米鬚茶 / 蔘茶</div>
+              <div class="shop-item-desc">送長輩很適合，健康養生。</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-category">🥤 飲料（在韓國喝個爽）</div>
+        <div class="shop-grid">
+          <div class="shop-item">
+            <img class="shop-item-img" src="images/shop-banana-milk.jpg" alt="香蕉牛奶" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="display:block"><div class="shop-item-emoji" style="display:none">🍌</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">香蕉牛奶</div>
+              <div class="shop-item-kr">바나나맛우유</div>
+              <div class="shop-item-desc">每天一瓶！韓國國民飲料。</div>
+            </div>
+          </div>
+          <div class="shop-item">
+            <img class="shop-item-img" src="images/shop-soju.jpg" alt="燒酒" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" style="display:block"><div class="shop-item-emoji" style="display:none">🍶</div>
+            <div class="shop-item-body">
+              <div class="shop-item-name">真露燒酒 / 水果燒酒</div>
+              <div class="shop-item-kr">진로 / 과일소주</div>
+              <div class="shop-item-desc">藍瓶經典款，水果口味各種嘗鮮。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <button class="collapsible-trigger" onclick="toggleCollapse(this)">
+      <span>⏰ 順路買的時機</span><span class="arrow">▼</span>
+    </button>
+    <div class="collapsible-content">
+      <div class="card-body">
+        <div class="shop-timing">
+          <strong>Day 2</strong> 釜田市場早上買草莓、人蔘、乾貨；札嘎其市場買海苔<br>
+          <strong>Day 3 或 4</strong> 找時間去樂天超市掃零食泡麵（西面樂天百貨 B1 或南浦光復店）<br>
+          <strong>Day 4-6</strong> 海雲台隨時可去古來思魚糕、Keveren House、二代名菓<br>
+          <strong>Day 5</strong> 去廣安里順便帶 CHEFFLE 起司舒芙蕾<br>
+          <strong>最後一天</strong> check-out 前記得留行李箱空間！🧳
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ==================== 指定項目 ==================== -->
 <section class="section" id="wishes">
   <div class="section-title"><span class="icon">✅</span> 指定項目清單</div>
@@ -1671,6 +1970,7 @@ html { scroll-behavior: smooth; }
   <a href="#flights" class="nav-btn"><span class="nav-icon">✈️</span>航班</a>
   <a href="#hotels" class="nav-btn"><span class="nav-icon">🏨</span>住宿</a>
   <a href="#itinerary" class="nav-btn"><span class="nav-icon">🗓️</span>行程</a>
+  <a href="#shopping" class="nav-btn"><span class="nav-icon">🛍️</span>必買</a>
   <a href="#wishes" class="nav-btn"><span class="nav-icon">✅</span>清單</a>
 </nav>
 

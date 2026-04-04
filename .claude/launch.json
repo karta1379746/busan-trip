@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "busan-trip",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8080", "-d", "/Users/ken/Documents/Cluade開發/busan-trip"],
+      "port": 8080
+    }
+  ]
+}
